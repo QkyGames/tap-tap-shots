@@ -5358,7 +5358,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.NinePatch.Acts.SetWidth,
 		C3.Plugins.Touch.Cnds.OnTouchStart,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
-		C3.Behaviors.Physics.Acts.ApplyForceAtAngle,
 		C3.Behaviors.Timer.Acts.StopTimer,
 		C3.Behaviors.Timer.Acts.StartTimer,
 		C3.Plugins.Sprite.Acts.Spawn,
@@ -5379,6 +5378,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Sprite.Cnds.CompareY,
 		C3.Plugins.Sprite.Exps.LayerName,
+		C3.Behaviors.Physics.Acts.ApplyForceAtAngle,
 		C3.Plugins.Sprite.Exps.Angle,
 		C3.Behaviors.Pin.Acts.Pin,
 		C3.Plugins.System.Cnds.Every,
@@ -5663,7 +5663,7 @@ self.C3_ExpressionFuncs = [
 		() => "complete",
 		() => "PAUSA_EVENTS",
 		() => "COMPLETE_EVENTS",
-		() => 45,
+		() => 47,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() / 672);
@@ -5796,9 +5796,9 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("jump1", "jump2");
 		},
-		() => 775,
-		() => 285,
-		() => 255,
+		() => 237.5,
+		() => -950,
+		() => -237.5,
 		() => "bg",
 		() => "ui_text",
 		p => {
@@ -5975,6 +5975,7 @@ self.C3_ExpressionFuncs = [
 			const f1 = p._GetNode(1).GetBoundMethod();
 			return () => multiply(f0(200, 800), f1((-1), 1));
 		},
+		() => 45,
 		p => {
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
